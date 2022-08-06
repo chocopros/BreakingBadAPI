@@ -4,7 +4,7 @@ import axios from 'axios'
 
 const Hero__container = () => {
 
-  const [character, setCharacter] = useState({})
+  const [character, setCharacter] = useState([])
 
   useEffect ( ()=>{
 
@@ -12,7 +12,7 @@ const Hero__container = () => {
 
       axios.get(URL)
       .then(rest => {
-          setCharacter(rest.data[0])
+          setCharacter(rest.data)
       })
       .catch(err => {console.log(err)})
   },[])
@@ -35,27 +35,26 @@ const Hero__container = () => {
 
         <div className="container__card">
 
-          
+          {character.map (per => (
+            <div className="card">
+              <h2>{per?.nickname}</h2>
+              <img src={per?.img} alt="" />
+              <ul className='list__details'>
+                <li><span>Name: </span>{per?.name}</li>
+                <li><span>Birthday: </span>{per.birthday}</li>
+                <li><span>Portrayed: </span>{per?.portrayed}</li>
+                <li><span>Status: </span>{per?.status}</li>
+              </ul>
+            </div>
+            
+          ))
+          }
 
-
-
-
-        <div className="card">
-        <h2>{character?.nickname}</h2>
-        <img src={character?.img} alt="" />
-        <ul className='list__details'>
-            <li><span>Name: </span>{character?.name}</li>
-            <li><span>Birthday: </span>{character.birthday}</li>
-            <li className='details__appearance'><span>Appearance: </span>{character?.occupation}</li>
-            <li className='details__Occupation'><span>Occupation: </span>{character?.name}</li>
-            <li><span>Status: </span>{character?.status}</li>
-        </ul>
-
-    </div>
-         
         </div>
-
+         
     </div>
+
+   
   )
 }
 
