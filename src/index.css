@@ -1,0 +1,134 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html{
+  background-image: url("https://i.pinimg.com/originals/cc/f0/6e/ccf06e174db200444d2a3e5d34dd96bf.jpg");
+  background-position: center;
+  
+}
+
+nav{
+  margin: 0 auto;
+  max-width: 1200px;
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  background-color: darkgreen;
+  height: 100px;
+  border-radius: 0 0 15px 15px;
+}
+
+.logo{
+  height: 80px;
+  
+}
+
+.list__nav{
+  display: flex;
+  gap: 30px;
+
+  font-size: 20px;
+  color: white;
+  list-style: none;
+
+}
+/*********** CARD ***************************/
+
+.container__card{
+  height: calc(100vh - 140px);;
+  margin: 0 auto;
+  margin-top: 40px;
+  max-width: 1200px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.card{
+  width: 300px;
+  height: 400px;
+  margin: 0 30px;
+  border: rgb(33, 185, 255, 0.5) solid 1px;
+  border-radius: 15px;
+  background-color: rgb(0, 0, 0);
+
+  box-shadow: rgba(255, 255, 255, 0.5) 5px 5px 5px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  
+  
+}
+
+.card:hover{
+  box-shadow: rgb(185, 175, 175) 7px 7px 15px;
+  transition: all .3s;
+}
+.card h2{
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.card img{
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+.list__details{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.list__details li span{
+  font-size: 16px;
+  color: darkgreen;
+  font-weight: bold;
+}
+
+.list__details li {
+  color: white;
+  font-size: 14px;
+}
+
+ul .details__appearance,
+ul .details__Occupation{
+  font-size: 10px;
+}
+
+
+@media only screen and (max-width: 928px) {
+
+  html{
+    background-image: url("https://i.pinimg.com/originals/cc/f0/6e/ccf06e174db200444d2a3e5d34dd96bf.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+  }
+
+  .list__nav{
+    display: none;
+
+  }
+
+  .logo{
+    height: 40px;
+    
+  }
+  
+  
+  
+}
