@@ -1,3 +1,6 @@
+
+/* clamp(35px, 7vw, 150px)*/
+
 *{
   padding: 0;
   margin: 0;
@@ -15,10 +18,15 @@ html{
   
 }
 
+.container__hero{
+  height: 100vh;
+  width: 100%;
+}
+
 
 nav{
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1024px;
   display: flex;
   justify-content:space-around;
   align-items: center;
@@ -39,27 +47,26 @@ nav{
   font-size: 20px;
   color: white;
   list-style: none;
-
 }
+
 /*********** CARD ***************************/
 
 .container__card{
-  height: calc(100vh - 140px);;
-  margin: 0 auto;
-  margin-top: 40px;
   max-width: 1200px;
+  margin: 20px auto;
+  margin-top: 10px;
+
 
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
+  justify-content: space-around;
+  
 }
 
 .card{
   width: 300px;
   height: 400px;
-  margin: 0 30px;
+  margin: 40px 30px;
   border: rgb(33, 185, 255, 0.5) solid 1px;
   border-radius: 15px;
   background-color: rgb(0, 0, 0);
@@ -71,7 +78,6 @@ nav{
   align-items: center;
   justify-content: center;
   gap: 15px;
-  
   
 }
 
@@ -115,11 +121,13 @@ ul .details__Occupation{
   font-size: 10px;
 }
 
+/********************TRAILER****************************/
+
 .container__trailer{
-  height: 80vh;
-  margin-top: 50px;
+  height: 60vh;
+
   width: 100%;
-  position:relative;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -128,7 +136,9 @@ ul .details__Occupation{
 
 .container__trailer h2{
   color: white;
-  font-size: 50px;
+  font-size: clamp(16px, 7vw, 60px);
+  margin-top: 50px;
+  
 }
 
 .amc{
@@ -136,14 +146,8 @@ ul .details__Occupation{
   font-size: 30px;
 }
 
-
-
 .trailer{
-  padding: 0 20px;
-  margin-top: 150px;
- 
-  position: absolute;
-  
+  margin-top: 50px;
 
 }
 
@@ -157,8 +161,7 @@ ul .details__Occupation{
 /************************* MEDIAS**************************/
 
 
-
-@media only screen and (max-width: 928px) {
+@media only screen and (max-width: 1079px) {
 
   html{
     background-image: url("https://i.pinimg.com/originals/cc/f0/6e/ccf06e174db200444d2a3e5d34dd96bf.jpg");
@@ -167,8 +170,6 @@ ul .details__Occupation{
     background-attachment: fixed;
     
   }
-
-
 
   .list__nav{
     display: none;
@@ -180,85 +181,39 @@ ul .details__Occupation{
     
   }
 
-  
-}
-
-@media only screen and (max-width: 1112px) {
-
-  .container__card{
+  .container__hero{
     height: 100%;
-   
-  
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+    width: 100%;
   }
 
-  .container__trailer h2{
-    font-size: 40px;
-  }
-
-
-
-  
-}
-
-@media only screen and (max-width: 688px) {
-
-  .container__trailer h2{
-    font-size: 28px;
-  }
- 
-  video{
+  .container__trailer{
+    height: 700px;
+    width: 100%;
     
+  }
+
+  
+}
+
+@media only screen and (max-width: 654px) {
+
+  .trailer{
+
     width: 480px;
-    height: 380px;
+  
   }
-
 
   
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 654px) {
 
-  .container__trailer h2{
-    font-size: 28px;
-  }
- 
-  video{
-    width: 400px;
-    height: 400px;
-  }
-  
-}
+  .trailer{
 
-@media only screen and (max-width: 375px) {
-
-  .container__trailer h2{
-    font-size: 24px;
-  }
- 
-  video{
-    width: 360px;
-    height: 360px;
-  }
-  
-}
-
-@media only screen and (max-width: 320px) {
-
-  .container__trailer h2{
-    font-size: 20px;
-  }
- 
-  video{
     width: 310px;
-    height: 310px;
+  
   }
+
   
 }
-
-
 

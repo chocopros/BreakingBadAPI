@@ -8,7 +8,7 @@ const Video_present = () => {
       <h3>Trailer Cortesia <span className='amc'>amc</span></h3>
 
 
-      <video className='trailer' width="640" height="480" controls autoPlay>
+      <video className='trailer' controls autoPlay>
         <source src='\src\assets\trailer.mp4' />
       </video>
 
