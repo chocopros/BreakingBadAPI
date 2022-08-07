@@ -2,6 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 
+
 const Hero__container = () => {
 
   const [character, setCharacter] = useState([])
@@ -21,7 +22,7 @@ const Hero__container = () => {
 
 
   return (
-    <div className='container__hero'>
+    <section className='container__hero'>
         <nav>
             <img className='logo' src="https://www.pngplay.com/wp-content/uploads/6/Breaking-Bad-Logo-PNG-HD-Quality.png" alt="" />
             <ul className='list__nav'>
@@ -36,6 +37,7 @@ const Hero__container = () => {
         <div className="container__card">
 
           {character.map (per => (
+
             <div className="card">
               <h2>{per?.nickname}</h2>
               <img src={per?.img} alt="" />
@@ -52,7 +54,7 @@ const Hero__container = () => {
 
         </div>
          
-    </div>
+    </section>
 
    
   )
