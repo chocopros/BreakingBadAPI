@@ -140,7 +140,7 @@ ul .details__Occupation{
 
 .trailer{
   padding: 0 20px;
-  margin-top: 40px;
+  margin-top: 80px;
  
   position: absolute;
   
@@ -212,8 +212,9 @@ ul .details__Occupation{
   }
  
   video{
+    
     width: 480px;
-    height: 480px;
+    height: 380px;
   }
 
 
