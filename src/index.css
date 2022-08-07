@@ -140,7 +140,7 @@ ul .details__Occupation{
 
 .trailer{
   padding: 0 20px;
-  margin-top: 80px;
+  margin-top: 40px;
  
   position: absolute;
   
@@ -168,6 +168,8 @@ ul .details__Occupation{
     
   }
 
+
+
   .list__nav{
     display: none;
 
@@ -185,8 +187,7 @@ ul .details__Occupation{
 
   .container__card{
     height: 100%;
-    margin: 0 auto;
-  
+   
   
     display: flex;
     flex-wrap: wrap;
